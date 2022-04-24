@@ -20,7 +20,7 @@ public class InsertService {
     private static final String COLLECTION_NAME = "msg";
 
     @Resource
-    private static MongoTemplate mongoTemplate;
+    private  MongoTemplate mongoTemplate;
 
     /**
      * 插入【一条】文档数据，如果文档信息已经【存在就抛出异常】

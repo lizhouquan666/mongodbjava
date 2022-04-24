@@ -21,7 +21,7 @@ public class QueryService {
     private static final String COLLECTION_NAME = "msg";
 
     @Resource
-    private static MongoTemplate mongoTemplate;
+    private  MongoTemplate mongoTemplate;
 
     /**
      * 查询集合中的【全部】文档数据
@@ -78,7 +78,7 @@ public class QueryService {
      */
     public Object findByCondition(String fromUserId) {
         // 创建条件对象
-        Criteria criteria = Criteria.where("fromUserId").is(fromUserId);
+        Criteria criteria = Criteria.where("toUserId").is(fromUserId);
         // 创建查询对象，然后将条件对象添加到其中
         Query query = new Query(criteria);
         // 查询并返回结果
@@ -165,7 +165,7 @@ public class QueryService {
      */
     public Object findByExistsField() {
         // 设置查询条件参数
-        String field = "sex";
+        String field = "toUserId";
         // 创建条件
         Criteria criteria = Criteria.where(field).exists(true);
         // 创建查询对象，然后将条件对象添加到其中
@@ -189,10 +189,10 @@ public class QueryService {
         String sex = "男";
         Integer age = 22;
         // 创建条件
-        Criteria criteriaSex = Criteria.where("sex").is(sex);
-        Criteria criteriaAge = Criteria.where("age").is(age);
+        Criteria criteriaSex = Criteria.where("data").is("你妹的");
+        //Criteria criteriaAge = Criteria.where("age").is(age);
         // 创建条件对象，将上面条件进行 AND 关联
-        Criteria criteria = new Criteria().andOperator(criteriaSex, criteriaAge);
+        Criteria criteria = new Criteria().andOperator(criteriaSex);
         // 创建查询对象，然后将条件对象添加到其中
         Query query = new Query(criteria);
         // 查询并返回结果

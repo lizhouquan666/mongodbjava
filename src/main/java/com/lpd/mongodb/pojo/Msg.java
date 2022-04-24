@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Accessors(chain = true)
 public class Msg {
     @Id
-    private int id;
+    private String id;
     private String fromUserId;
     private String toUserId;
     private String data;
@@ -22,17 +22,5 @@ public class Msg {
     private String accepttime;
     private int state;
 
-    @Override
-    public String toString() {
-        return "Msg{" +
-                "id=" + id +
-                ", fromUserId='" + fromUserId + '\'' +
-                ", toUserId='" + toUserId + '\'' +
-                ", data='" + data + '\'' +
-                ", filePath='" + filePath + '\'' +
-                ", sendTime='" + sendTime + '\'' +
-                ", accepttime='" + accepttime + '\'' +
-                ", state=" + state +
-                '}';
-    }
+
 }
