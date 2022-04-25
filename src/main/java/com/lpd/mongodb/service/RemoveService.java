@@ -1,3 +1,4 @@
+/*
 package com.lpd.mongodb.service;
 
 import com.lpd.mongodb.pojo.Msg;
@@ -14,19 +15,23 @@ import java.util.List;
 @Service
 public class RemoveService {
 
-    /**
+    */
+/**
      * 设置集合名称
-     */
+     *//*
+
     private static final String COLLECTION_NAME = "users";
 
     @Resource
     private MongoTemplate mongoTemplate;
 
-    /**
+    */
+/**
      * 删除集合中【符合条件】的【一个]或[多个】文档
      *
      * @return 删除用户信息的结果
-     */
+     *//*
+
     public Object remove() {
         // 设置查询条件参数
         int age = 30;
@@ -43,11 +48,13 @@ public class RemoveService {
         return resultInfo;
     }
 
-    /**
+    */
+/**
      * 删除【符合条件】的【单个文档】，并返回删除的文档。
      *
      * @return 删除的用户信息
-     */
+     *//*
+
     public Object findAndRemove() {
         // 设置查询条件参数
         String name = "zhangsansan";
@@ -63,11 +70,13 @@ public class RemoveService {
         return result;
     }
 
-    /**
+    */
+/**
      * 删除【符合条件】的【全部文档】，并返回删除的文档。
      *
      * @return 删除的全部用户信息
-     */
+     *//*
+
     public Object findAllAndRemove() {
         // 设置查询条件参数
         int age = 22;
@@ -84,3 +93,4 @@ public class RemoveService {
     }
 
 }
+*/

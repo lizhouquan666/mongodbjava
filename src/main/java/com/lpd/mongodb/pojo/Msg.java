@@ -20,7 +20,7 @@ public class Msg {
     private String filePath;
     private String sendTime;
     private String accepttime;
-    private int state;
+    private String state;
 
 
 }

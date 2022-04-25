@@ -1,3 +1,4 @@
+/*
 package com.lpd.mongodb.service;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -10,11 +11,13 @@ public class RemoveCollectionService {
     @Resource
     private MongoTemplate mongoTemplate;
 
-    /**
+    */
+/**
      * 删除【集合】
      *
      * @return 创建集合结果
-     */
+     *//*
+
     public Object dropCollection() {
         // 设置集合名称
         String collectionName = "msg";
@@ -25,3 +28,4 @@ public class RemoveCollectionService {
     }
 
 }
+*/

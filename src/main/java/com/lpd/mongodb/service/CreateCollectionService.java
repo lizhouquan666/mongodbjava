@@ -1,3 +1,4 @@
+/*
 package com.lpd.mongodb.service;
 
 import org.springframework.data.mongodb.core.CollectionOptions;
@@ -14,13 +15,15 @@ public class CreateCollectionService {
     @Resource
     private MongoTemplate mongoTemplate;
 
-    /**
+    */
+/**
      * 创建【集合】
      * 
      * 创建一个大小没有限制的集合（默认集合创建方式） 
      * 
      * @return 创建集合的结果
-     */
+     *//*
+
     public Object createCollection() {
         // 设置集合名称
         String collectionName = "msg";
@@ -30,13 +33,15 @@ public class CreateCollectionService {
         return mongoTemplate.collectionExists(collectionName) ? "创建视图成功" : "创建视图失败";
     }
 
-    /**
+    */
+/**
      * 创建【固定大小集合】
      * 
      * 创建集合并设置 `capped=true` 创建 `固定大小集合`，可以配置参数 `size` 限制文档大小，可以配置参数 `max` 限制集合文档数量。
      *
      * @return 创建集合的结果
-     */
+     *//*
+
     public Object createCollectionFixedSize() {
         // 设置集合名称
         String collectionName = "msg";
@@ -57,7 +62,8 @@ public class CreateCollectionService {
         return mongoTemplate.collectionExists(collectionName) ? "创建视图成功" : "创建视图失败";
     }
 
-    /**
+    */
+/**
      * 创建【验证文档数据】的集合
      *
      * 创建集合并在文档"插入"与"更新"时进行数据效验，如果符合创建集合设置的条件就进允许更新与插入，否则则按照设置的设置的策略进行处理。
@@ -71,7 +77,8 @@ public class CreateCollectionService {
      *   - warn：对于"文档"不符合校验规则的 MongoDB 允许写入，但会记录一条告警到 mongod.log 中去。日志内容记录报错信息以及该"文档"的完整记录。
      * 
      * @return 创建集合结果
-     */
+     *//*
+
     public Object createCollectionValidation() {
         // 设置集合名称
         String collectionName = "msg";
@@ -91,3 +98,4 @@ public class CreateCollectionService {
     }
 
 }
+*/
